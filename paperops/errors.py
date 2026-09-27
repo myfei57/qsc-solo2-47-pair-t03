@@ -75,3 +75,34 @@ class OutOfRangeError(ContractError):
 
 class UnknownSensorError(ContractError):
     """Raised when a moisture sensor is addressed before it is mapped."""
+
+
+# ---------------------------------------------------------------- orchestration
+
+
+class PlanError(ContractError):
+    """Base class for every malformed orchestration plan declaration."""
+
+
+class EmptyPlanError(PlanError):
+    """Raised when a plan is declared without any steps."""
+
+
+class DuplicateStepError(PlanError):
+    """Raised when two steps in one plan declare the same name."""
+
+
+class UnknownStepError(PlanError):
+    """Raised when a step name is used that the plan never declared."""
+
+
+class UnknownResourceError(PlanError):
+    """Raised when a step claims a resource the plan never declared."""
+
+
+class DependencyCycleError(PlanError):
+    """Raised when the declared step dependencies form a cycle."""
+
+
+class PlanCancelledError(ContractError):
+    """Raised inside an action that notices its run was cancelled cooperatively."""

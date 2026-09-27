@@ -33,6 +33,18 @@ TOPIC_WATER_SAMPLE = "water.sample.added"
 
 TOPIC_SNAPSHOT = "state.snapshot"
 
+TOPIC_RUN_STARTED = "orchestrate.run.started"
+TOPIC_RUN_FINISHED = "orchestrate.run.finished"
+TOPIC_STEP_READY = "orchestrate.step.ready"
+TOPIC_STEP_STARTED = "orchestrate.step.started"
+TOPIC_STEP_WAITING = "orchestrate.step.waiting"
+TOPIC_STEP_GRANTED = "orchestrate.step.granted"
+TOPIC_STEP_SUCCEEDED = "orchestrate.step.succeeded"
+TOPIC_STEP_FAILED = "orchestrate.step.failed"
+TOPIC_STEP_CANCELLED = "orchestrate.step.cancelled"
+TOPIC_RESOURCE_GRANTED = "orchestrate.resource.granted"
+TOPIC_RESOURCE_RELEASED = "orchestrate.resource.released"
+
 ALL_TOPICS: tuple[str, ...] = (
     TOPIC_DEWATER_PERSISTED,
     TOPIC_PRESS_LOAD,
@@ -58,4 +70,15 @@ ALL_TOPICS: tuple[str, ...] = (
     TOPIC_WATER_PROFILE,
     TOPIC_WATER_SAMPLE,
     TOPIC_SNAPSHOT,
+    TOPIC_RUN_STARTED,
+    TOPIC_RUN_FINISHED,
+    TOPIC_STEP_READY,
+    TOPIC_STEP_STARTED,
+    TOPIC_STEP_WAITING,
+    TOPIC_STEP_GRANTED,
+    TOPIC_STEP_SUCCEEDED,
+    TOPIC_STEP_FAILED,
+    TOPIC_STEP_CANCELLED,
+    TOPIC_RESOURCE_GRANTED,
+    TOPIC_RESOURCE_RELEASED,
 )
