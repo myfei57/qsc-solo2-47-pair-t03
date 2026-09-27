@@ -69,6 +69,26 @@ class PreGateError(ContractError):
     """Raised when a downstream action runs before its upstream value is durable."""
 
 
+class UnknownResourceError(ContractError):
+    """Raised when a resource is used that the pool does not declare."""
+
+
+class ResourceBusyError(ContractError):
+    """Raised when a resource is acquired while another holder keeps it."""
+
+
+class ResourceHolderError(ContractError):
+    """Raised when a resource is released by someone who does not hold it."""
+
+
+class UnknownStepError(ContractError):
+    """Raised when a step depends on a step the orchestration does not declare."""
+
+
+class DuplicateStepError(ContractError):
+    """Raised when a step name is declared twice in one orchestration."""
+
+
 class OutOfRangeError(ContractError):
     """Raised when a parameter falls outside its declared band."""
 
